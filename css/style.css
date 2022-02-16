@@ -3,7 +3,7 @@
 :root {
 
     --Soft-blue: hsl(215, 51%, 70%);
-    --Cyan: hsl(178, 100%, 50%);
+    --Cyan: hsla(178, 100%, 50%, 0.5);
     --mainBG: hsl(217, 54%, 11%);
     --cardBG: hsl(216, 50%, 16%);
     --line: hsl(215, 32%, 27%);
@@ -60,20 +60,42 @@ body {
     height: 230px;
     width: 100%;
 
-
+	position: relative;
+	overflow: hidden;
     border-radius: 4%;
 }
 
 .imagen {
     width: 100%;
-    height: 100%;
-    position: relative;  border-radius: 4%;
+
+
+    border-radius: 4%;
+    transition: all .5s;
 }
 
-
-.imagen:hover {
+.card-image:hover {
     cursor: pointer;
+}
 
+.card-image  .caption {
+    position: absolute;
+    background-color: var(--Cyan);
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	transition: all 0.5s;
+    top: 0;
+	left: 0;
+	height: 100%;
+    transform: translateY(-100%);
+	width: 100%;
+   
+}
+.card-image:hover  .caption{
+	transform: translateY(0);
+   
 }
 
 .card-info {
