@@ -142,6 +142,9 @@ footer {
 
 }
 
+
+
+
 footer a {
     text-decoration: none;
     color: var(--Cyan);
@@ -220,3 +223,15 @@ footer a {
     margin: 0 .5em 0 0;
     border: 1px solid var(--white);
 }
+/*Escribir media query para footer */
+ @media screen and (max-width: 600px) {
+  footer {
+flex-wrap: wrap;
+    
+        font-size: 15px;
+     
+
+  }
+  
+
+ }
